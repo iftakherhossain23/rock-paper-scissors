@@ -34,7 +34,7 @@ function playGame(){
         }
         else if(humanChoice == "paper"){
             if(computerChoice == "rock"){
-                console.log("You lose! Paper beats Rock.");
+                console.log("You win! Paper beats Rock.");
                 ++humanScore;
             }
             else if(computerChoice == "paper") console.log("Tie! Paper and Paper.");
@@ -62,8 +62,10 @@ function playGame(){
 
     console.log("Player: " + humanScore);
     console.log("Computer: " + computerScore);
-    (humanScore > computerScore) ? console.log("You win!") : console.log("You lose!");
-    if(humanScore == computerScore) console.log("It's a tie!");
+
+    if (humanScore > computerScore)  console.log("You win!");
+    else if (humanScore < computerScore) console.log("You lose!");
+    else console.log("It's a tie!");
 }
 
 playGame();
